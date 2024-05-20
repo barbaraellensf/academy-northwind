@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: dim_products
+    description: >
+      Dimension products table from Northwind. With discontinued products categorized.
+    columns:
+      - name: PK_PRODUCT
+        description: primary key of dim_products
+        tests:
+          - unique
+          - not_null
+
+      - name: NM_PRODUCT
+        description: product name
+        tests:
+          - not_null
+
+      - name: QUANTITY_PER_UNITY
+        description: quantity per unity
+
+      - name: UNIT_PRICE
+        description: product unity price
+
+      - name: UNITS_IN_STOCK
+        description: units of the product in stock
+
+      - name: UNITS_ON_ORDER
+        description: units in order
+
+      - name: ORDER_LEVEL
+        description: order leval
+
+      - name: IS_DISCONTINUED
+        description: if product is discontinued or not
+
+      - name: NM_CATEGORY
+        description: category name
+
+      - name: DS_CATEGORY
+        description: category description
+
+      - name: NM_SUPPLIER
+        description: supplier name
+
+      - name: CITY_SUPPLIER
+        description: supplier city
+
+      - name: COUNTRY_SUPPLIER
+        description: supplier country
