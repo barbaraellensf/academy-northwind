@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: dim_employees
+    description: >
+      Dimension employees table from Northwind. With managers info such as name and title.
+    columns:
+      - name: PK_EMPLOYEE
+        description: primary key of dim_employees
+        tests:
+          - unique
+          - not_null
+
+      - name: EMPLOYEE_NAME
+        description: employee name
+
+      - name: EMPLOYEE_TITLE
+        description: employee title
+
+      - name: EMP_BIRTH_DATE
+        description: employee birthdate
+
+      - name: EMP_HIRE_DATE
+        description: employee hire date
+
+      - name: MANAGER_NAME
+        description: employee manager's name
+        
+      - name: MANAGER_TITLE
+        description: employee manager's tile
