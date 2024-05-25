@@ -1,0 +1,72 @@
+version: 2
+
+models:
+  - name: fct_sales
+    description: >
+      Fact table for sales with metrics.
+    columns:
+      - name: SK_SALES
+        description: primary key for fact sales
+        tests:
+          - unique
+          - not_null
+      - name: FK_PRODUCT
+        description: foreign key product
+      - name: FK_CUSTOMER
+        description: foreign key customer
+      - name: FK_EMPLOYEE
+        description: foreign key employee
+      - name: FK_SHIPBY
+        description: foreign key shipping company
+      - name: INVOICE_NUMBER
+        description: invoice number or order primary key
+      - name: ORDER_DATE
+        description: order date
+      - name: REQUIRED_DELIVERY_DATE
+        description: required date for delivery
+      - name: SHIPPING_DATE
+        description: shipping date
+      - name: NM_RECIPIENT
+        description: recipient name
+      - name: CITY_RECIPIENT
+        description: city of recipient
+      - name: REGION_RECIPIENT
+        description: region of recipient
+      - name: REGION_COUNTRY
+        description: country region
+      - name: UNIT_PRICE
+        description: unit price for product
+      - name: QUANTITY
+        description: quantity of product in order
+      - name: DISCOUNT
+        description: discount for product
+      - name: NM_PRODUCT
+        description: product name
+      - name: IS_DISCONTINUED
+        description: boolean if product is discontinued or not
+      - name: NM_CATEGORY
+        description: product category name
+      - name: DS_CATEGORY
+        description: description of category
+      - name: NM_SUPPLIER
+        description: supplier name
+      - name: CITY_SUPPLIER
+        description: city of supplier
+      - name: COUNTRY_SUPPLIER
+        description: country of supplier
+      - name: EMPLOYEE_NAME
+        description: employee name who made the sale
+      - name: EMPLOYEE_TITLE
+        description: employee title who made the sale
+      - name: EMP_HIRE_DATE
+        description: employee hire date
+      - name: MANAGER_NAME
+        description: employee manager's name
+      - name: GROSS_VALUE
+        description: gross value for sale
+      - name: NET_VALUE
+        description: net value for sale (after discount)
+      - name: SENIORITY_IN_YEARS
+        description: seniority of saler 
+      - name: PRORATED_SHIPPING
+        description: shipping value by product (freight divided by invoice number)
