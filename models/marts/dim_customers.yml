@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: >
+      Dimension customers table from Northwind.
+    columns:
+      - name: PK_CUSTOMER
+        description: primary key of dim_employees
+        tests:
+          - unique
+          - not_null
+
+      - name: CUSTOMER_COMPANY
+        description: customer's company name
+
+      - name: CUSTOMER_NAME
+        description: customer name
+
+      - name: CUSTOMER_CITY
+        description: customer city
+
+      - name: CUSTOMER_REGION
+        description: customer region
+
+      - name: CUSTOMER_COUNTRY
+        description: customer country
