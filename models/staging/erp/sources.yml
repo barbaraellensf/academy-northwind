@@ -20,4 +20,5 @@ sources:
               - not_null
       - name: employee
       - name: customer
+      - name: shipper
 
