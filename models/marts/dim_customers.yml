@@ -6,7 +6,7 @@ models:
       Dimension customers table from Northwind.
     columns:
       - name: PK_CUSTOMER
-        description: primary key of dim_employees
+        description: primary key of dim_customers
         tests:
           - unique
           - not_null

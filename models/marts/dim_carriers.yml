@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: dim_carriers
+    description: >
+      Dimension for shipping companies table from Northwind.
+    columns:
+      - name: PK_SHIPPER
+        description: primary key of dim_carriers
+        tests:
+          - unique
+          - not_null
+
+      - name: SHIPPER_NAME
+        description: shipping company name
